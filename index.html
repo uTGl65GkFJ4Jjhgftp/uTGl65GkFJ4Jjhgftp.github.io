@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        .background-1 {
+            background: url('image1.jpg') no-repeat center center/cover;
+        }
+
+        .background-2 {
+            background: url('image2.jpg') no-repeat center center/cover;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body class="background-1">
+    <button class="toggle-button" onclick="toggleBackground()">Toggle Background</button>
+    
+    <script>
+        function toggleBackground() {
+            document.body.classList.toggle('background-1');
+            document.body.classList.toggle('background-2');
+        }
+    </script>
+</body>
+</html>
