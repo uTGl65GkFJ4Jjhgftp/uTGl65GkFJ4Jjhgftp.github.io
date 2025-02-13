@@ -16,11 +16,11 @@
         }
 
         .background-1 {
-            background: url('image1.jpg') no-repeat center center/cover;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_West_Germany%3B_Flag_of_Germany_%281990%E2%80%931996%29.svg/1920px-Flag_of_West_Germany%3B_Flag_of_Germany_%281990%E2%80%931996%29.svg.png') no-repeat center center/cover;
         }
 
         .background-2 {
-            background: url('image2.jpg') no-repeat center center/cover;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Flag_of_East_Germany.svg/1920px-Flag_of_East_Germany.svg.png') no-repeat center center/cover;
         }
 
         .toggle-button {
@@ -37,12 +37,19 @@
     </style>
 </head>
 <body class="background-1">
-    <button class="toggle-button" onclick="toggleBackground()">Toggle Background</button>
+    <button class="toggle-button" onclick="toggleBackground()">blue</button>
     
     <script>
         function toggleBackground() {
             document.body.classList.toggle('background-1');
             document.body.classList.toggle('background-2');
+            
+            let button = document.querySelector('.toggle-button');
+            if (document.body.classList.contains('background-1')) {
+                button.textContent = 'DDR';
+            } else {
+                button.textContent = 'BRD';
+            }
         }
     </script>
 </body>
